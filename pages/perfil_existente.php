@@ -19,7 +19,7 @@
                         echo '
                             <tr>
                                 <td>'.$nombre.'</td>
-                                <td><a href="jugar?usuario='.$nombre.'" class="btn btn-raised btn-primary">Jugar</a></td>
+                                <td><a href="jugar?usuario='.$id_usuario.'" class="btn btn-raised btn-primary">Jugar</a></td>
                             </tr>
                         ';
                         $i++;
