@@ -8,23 +8,10 @@ CREATE TABLE perfil_usuario(
     PRIMARY KEY pk_usuario(id_usuario)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE respuesta(
-	id_respuesta int(11) not null auto_increment,
-    resp varchar(1000) not null,
-    PRIMARY KEY pk_respuestas(id_respuesta)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 CREATE TABLE pregunta(
 	id_pregunta int(11) not null auto_increment,
     preg varchar(500) not null,
-    resp_correcta int(11) not null, 
-    PRIMARY KEY pk_pregunta(id_pregunta),
-    FOREIGN KEY fk_respuesta(resp_correcta) REFERENCES respuesta(id_respuesta)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE administrador(
-	id_usuario int(11) not null auto_increment,
-    nombre varchar(20) not null,
-    pass varchar(250) not null,
-    PRIMARY KEY pk_administrador(id_usuario)
+    respuesta varchar(500) not null,
+    used int(11) DEFAULT '0',
+    PRIMARY KEY pk_pregunta(id_pregunta)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
